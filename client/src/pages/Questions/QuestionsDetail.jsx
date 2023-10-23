@@ -75,7 +75,7 @@ const QuestionsDetail = () => {
     const Navigate= useNavigate()
     const dispatch= useDispatch()
     const location= useLocation()
-    const url= 'http://localhost:3000'
+    const url= 'https://stack-over-flow-server.onrender.com'
 
     const handlePosAns = (e, answerLength) =>{
         e.preventDefault()

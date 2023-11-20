@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API= axios.create({ baseURL: 'https://stack-over-flow-jlym.onrender.com'})
+const API= axios.create({ baseURL: 'http://localhost:5000/'})
 
 API.interceptors.request.use((req) =>{
     if(localStorage.getItem('Profile')){
@@ -11,7 +11,7 @@ API.interceptors.request.use((req) =>{
 export const logIn = (authData) => API.post('/users/login',authData);
 export const signUp = (authData) => API.post('/users/signup',authData);
 
-export const postQuestion= (questionData) => API.post('/questions/Ask', questionData);
+export const postQuestion= (questionData) => API.post('/questions/Ask', questionData,{headers: {'Content-type':'multipart/form-data'}});
 export const getAllQuestions= () => API.get('/questions/get');
 
 export const postAnswer = (id,noOfAnswers, answerBody, userAnswered, userId ) => API.patch(`/answer/post/${id}`, {noOfAnswers, answerBody, userAnswered, userId})
@@ -23,3 +23,4 @@ export const voteQuestion = (id, value, userId) => API.patch(`/questions/vote/${
 export const fetchAllUsers = ()=> API.get('/users/getAllUsers')
 
 export const updateProfile= (id, updatedata) => API.patch(`/users/update/${id}`, updatedata)
+export const updateLoginInfo= (id, updateLoginHistory) => API.patch(`/users/updateLoginInfo/${id}`, updateLoginHistory)

@@ -5,7 +5,8 @@
     import QuestionRoutes from './routes/Questions.js'
     import bodyParser from 'body-parser'
     import answerRoutes from './routes/Answers.js'
-    import dotenv from 'dotenv'
+    import dotenv from 'dotenv';
+    import multer from 'multer'
 
     const app=express()
     dotenv.config();
@@ -22,7 +23,7 @@
         extended: true
    }));
     app.use(cors());
-
+    app.use(multer().any());
     app.get('/',(req,res)=> {
         res.send("This is stack overflow clone API")
     })

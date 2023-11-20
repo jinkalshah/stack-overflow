@@ -39,7 +39,7 @@ const Navbar = () => {
             <Link to='/' className='nav-item nav-logo'>
                 <img src={logo1} alt="logo" />
             </Link>
-            <Link to='/' className='nav-item nav-btn'>About</Link>
+            <Link to='/about' className='nav-item nav-btn'>About</Link>
             <Link to='/' className='nav-item nav-btn'>Product</Link>
             <Link to='/' className='nav-item nav-btn'>For Teams</Link>
             <form>

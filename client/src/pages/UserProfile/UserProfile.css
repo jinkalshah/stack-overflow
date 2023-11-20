@@ -79,4 +79,30 @@
     margin-left: 10px;
     cursor: pointer;
   }
+
+  table{
+    border-collapse:collapse ;
+  }
+  th{
+    background-color: #ef8236;
+  }
+  th,td{
+    border: 1px solid black;
+    padding: 8px;
+    font-size: 13px;
+    text-align: center;
+  } 
+  .historyTable{
+    height: 200px;
+    overflow-y: auto;
+    width: 80%;
+    
+  }
+  table{
+    width: 100%;
+  }
+  table thead{
+    position: sticky;
+    top: 0;
+  }
   

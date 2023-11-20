@@ -48,7 +48,7 @@ const UserProfile = () => {
                     Switch ?(
                         <EditProfileForm currentUser={currentUser} setSwitch={setSwitch}/>
                     ) :
-                    <ProfileBio currentProfile={currentProfile} />
+                    <ProfileBio currentProfile={currentProfile} currentUser={currentUser} id={id} />
                 }
                 </>
             </section>

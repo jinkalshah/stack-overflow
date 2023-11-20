@@ -1,3 +1,13 @@
+:global{
+    input[type=file] {
+        display: block;
+        color: red;
+        font-style: oblique;
+      }
+      input[type=file]::file-selector-button {
+        display: none;
+      }
+}
 .ask-question{
     min-height: 100vh;
     background-color: #f1f2f3;
@@ -53,4 +63,16 @@
 
 .review-btn:hover{
     background-color: #0086d8;
+}
+.codeClass{
+    font-family: Consolas, "courier new";
+  color: crimson;
+  background-color: #f1f1f1;
+  padding: 2px;
+  font-size: 105%;
+  height: 200px;
+  width: 20vw;
+  margin-left: 20px;
+  display: block;
+  border: 1px solid lightgray;
 }

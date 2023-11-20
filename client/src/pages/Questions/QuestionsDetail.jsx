@@ -75,7 +75,7 @@ const QuestionsDetail = () => {
     const Navigate= useNavigate()
     const dispatch= useDispatch()
     const location= useLocation()
-    const url= 'https://stack-over-flow-jlym.onrender.com'
+    const url= 'http://localhost:5000/'
 
     const handlePosAns = (e, answerLength) =>{
         e.preventDefault()
@@ -126,7 +126,12 @@ const QuestionsDetail = () => {
                                     <img src={downVote} alt="downVote" width='18' className='votes-icon' onClick={handleDownVote} />
                                 </div>
                                 <div style={{width: "100%"}}>
-                                    <p className='question-body'>{question.questionBoady}</p>
+                                    <p className='question-body'>{question.questionBody?.text}</p>
+                                    {
+                                        question.questionBody?.code &&
+                                        <code className='question-code'>{question.questionBody?.code}</code>
+                                    }
+                                    
                                     <div className="question-details-tags">
                                         {
                                             question.questionTags.map((tag)=>(

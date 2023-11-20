@@ -17,3 +17,11 @@ export const updateProfile= (id, updateData) => async(dispatch) =>{
         console.log(error)
     }
 }
+export const updateLoginInfo= (id, updateLoginHistory) => async(dispatch) =>{
+    try {
+        const {data}= await api.updateLoginInfo(id,updateLoginHistory)
+        dispatch({type: 'UPDATE_LOGIN_INFO', payload:data})
+    } catch (error) {
+        console.log(error)
+    }
+}

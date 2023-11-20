@@ -7,6 +7,7 @@ const userSchema= mongoose.Schema({
     about: {type: String},
     tags: {type: [String] },
     joinedOn: {type: Date, default: Date.now},
+    loginHistory: {type: [Object]}
 })
 
 export default mongoose.model("User", userSchema)
